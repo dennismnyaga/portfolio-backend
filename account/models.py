@@ -20,7 +20,7 @@ class Porfolio(models.Model):
     git_repo = models.URLField(max_length=200)
     site_image = models.ImageField(upload_to="site_images/")
     stacks = models.ManyToManyField(TechStack)
-    state_of_project = models.OneToOneField(ProjectState, on_delete=models.CASCADE)
+    state_of_project = models.ForeignKey(ProjectState, on_delete=models.CASCADE)
     description = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
