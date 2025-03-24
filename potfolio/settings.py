@@ -33,7 +33,8 @@ SECRET_KEY = 'django-insecure-h$u^%aeolop153*l+q7feq1y3!164p=08og(^e5d7th=o4*hhp
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'joyce1.pythonanywhere.com'
+    'joyce1.pythonanywhere.com',
+    '127.0.0.1'
 ]
 
 
@@ -163,5 +164,14 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://127.0.0.1:9000",
     "http://localhost:5173",
-    "https://dennismnyaga.github.io/my-portfolio"
+    'http://localhost:5174'
+    # "https://dennismnyaga.github.io/my-portfolio"
 ]
+
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"  # Change to your email provider's SMTP server
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "your-email@gmail.com"  # Your email
+EMAIL_HOST_PASSWORD = "your-email-password" 

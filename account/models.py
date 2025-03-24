@@ -28,3 +28,13 @@ class Porfolio(models.Model):
     def __str__(self):
         return self.site_name
     
+
+
+class EmailMessage(models.Model):
+    name = models.CharField(max_length=500)
+    email = models.EmailField(max_length=500)
+    message = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name

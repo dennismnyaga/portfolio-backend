@@ -24,3 +24,10 @@ class PotfolioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Porfolio
         fields = '__all__'
+
+
+
+class EmailMessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = EmailMessage
+        fields = "__all__"

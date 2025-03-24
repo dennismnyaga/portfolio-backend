@@ -5,3 +5,4 @@ from .models import *
 admin.site.register(ProjectState)
 admin.site.register(TechStack)
 admin.site.register(Porfolio)
+admin.site.register(EmailMessage)
